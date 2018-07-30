@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+	<action name="">
+			<result>views/login.jsp</result>
+		</action>
+		<action name="login" class="edu.struts2.web.loginAction"
+			method="execute">
+			<result name="success" type="redirect">ListUSER</result>
+			<result name="input">views/login.jsp</result>
+		</action>
+		
+	 <action name="ListUSER" class="edu.struts2.web.AllActionFuckyou"
+			method="list">
+			<result name="success" >views/testlist.jsp</result>
+		</action>
+		
+		 <action name="saveUSER" class="edu.struts2.web.AllActionFuckyou"
+			method="save">
+			<result name="success" type="redirect">ListUSER</result>
+		</action>
+		
+		 <action name="editUSER" class="edu.struts2.web.AllActionFuckyou" method="update">
+			<result name="success" >views/edit.jsp</result>			
+		</action>
+		
+		<action name="deleteUSER" class="edu.struts2.web.AllActionFuckyou"
+			method="delete">
+			<result name="success" type="redirect" >ListUSER</result>
+		</action>
+		
+	
+	
+	
+		<!-- <action name="test" class="edu.struts2.web.UserFindAll"
+			method="list">
+			<result name="success" >views/testlist.jsp</result>
+		</action>
+	
+
+		<action name="home">
+			<result>views/login.jsp</result>
+		</action>
+	
+		
+		<action name="userform">
+			<result>views/add.jsp</result>
+		</action>
+
+		<action name="index" class="edu.struts2.web.UserFindAll"
+			method="list">
+			<result name="success" >views/list.jsp</result>
+		</action>
+		login
+		<action name="login" class="edu.struts2.web.loginAction"
+			method="execute">
+			<result name="success" type="redirect">index</result>
+			<result name="input">views/login.jsp</result>
+		</action>
+
+		adduser
+		<action name="adduser" class="edu.struts2.web.SaveUser" method="add">
+		    <result name="input">views/add.jsp</result>
+			<result name="success" type="redirect">index</result>
+		
+		</action>
+	
+	
+
+		update
+		<action name="update" class="edu.struts2.web.UpdateUser" method="input">
+			<result name="input">views/edit.jsp</result>
+			<result name="success" >index</result>
+		
+		</action>
+
+		delete
+		<action name="delete" class="edu.struts2.web.DeleteUser"
+			method="delete">
+			<result name="success" type="redirect">index</result>
+			
+		</action> -->
+
+	</package>
+</struts>
